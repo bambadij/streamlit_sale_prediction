@@ -89,7 +89,7 @@ if st.button("Predict", key="predict_button", help="Click to make a prediction."
  # Encode the categorical columns
         input_encoded_df = pd.DataFrame(encoder.transform(input_df_imputed_cat).toarray(),
                                    columns=encoder.get_feature_names_out(cat_columns))
-
+ 
 # Scale the numerical columns
         input_df_scaled = scaler.transform(input_df_imputed_num)
         input_scaled_df = pd.DataFrame(input_df_scaled , columns = num_columns)
